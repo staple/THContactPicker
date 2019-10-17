@@ -471,7 +471,7 @@
 	
 	// Adjust frame of view if necessary
 	newHeight = (newHeight > maxFrameHeight) ? maxFrameHeight : newHeight;
-	if (self.frame.size.height != newHeight){
+	if (fabs(self.frame.size.height - newHeight) >= 1.0){
 		// Adjust self height
 		CGRect selfFrame = self.frame;
 		selfFrame.size.height = newHeight;
